@@ -1,6 +1,6 @@
 package day2ConstructorEncapsulation;
 
-public class BankAccount {
+class BankAccount {
     private String accountHolder;
     private String accountNumber;
     private double balance;
@@ -8,36 +8,36 @@ public class BankAccount {
 
 
     //Parameterized constructor
-    public BankAccount(String accountHolder, String accountNumber, double initialBalance){
+    BankAccount(String accountHolder, String accountNumber, double initialBalance){
         this.accountHolder=accountHolder;
         this.accountNumber= accountNumber;
         this.balance= initialBalance;
     }
     //default constructor
-    public BankAccount(){
+    BankAccount(){
         if (balance<0){
             balance=0;
         }
     }
 
     //Getter to implement encapsulation
-    public double getBalance() {
+    double getBalance() {
         return balance;
     }
-    public String getAccountHolder(){
+    String getAccountHolder(){
         return accountHolder;
     }
-    public String getAccountNumber(){
+    String getAccountNumber(){
         return accountNumber;
     }
     //setter
-    public void deposit(double amount){
+    void deposit(double amount){
         if(amount>0){
             balance+=amount;
         }
         else System.out.println("Deposit Error");
     }
-    public void withdraw(double amount){
+    void withdraw(double amount){
         if(amount>0 && balance>=amount){
             balance-=amount;
         }
