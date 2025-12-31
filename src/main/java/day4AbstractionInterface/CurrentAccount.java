@@ -1,0 +1,20 @@
+package day4AbstractionInterface;
+
+public class CurrentAccount extends BankAccount {
+    public CurrentAccount(String accountNumber, double amount) {
+        super(accountNumber, amount);
+    }
+
+    @Override
+    protected void withdraw(double amount) {
+        if (balance - amount >= 1000) {
+            balance -= amount;
+            System.out.println("Withdraw succesfull tk " + amount);
+            System.out.println("New Balance is tk " + balance);
+        }
+        else
+            System.out.println("Failed, Ballance is less than minimum.");
+    }
+
+
+}
