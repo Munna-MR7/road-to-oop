@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Enter Initial Balance: ");
         double initialBalance = sc.nextDouble();
         BankAccount account;
-        Service service = new Service();
+        BankService service = new BankService();
 
 
         if(type==1) {

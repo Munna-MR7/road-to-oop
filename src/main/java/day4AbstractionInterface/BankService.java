@@ -1,12 +1,6 @@
 package day4AbstractionInterface;
 
-public class Service implements BankOperations{
-//    BankAccount ac= new BankAccount() {
-//        @Override
-//        protected void withdraw(double amount) {
-//
-//        }
-//    };
+public class BankService implements BankOperations{
 
     @Override
     public void transfer(BankAccount account, double amount){
